@@ -1,0 +1,241 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: o;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-backdrop);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal {
+  display: block;
+  position: absolute;
+  top: 221;
+  left: 536;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background-color: var(--bg-white);
+  z-index: 1;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition-property: visibility, opacity, transform;
+  transition-duration: 4s;
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+
+  &__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--bg-white);
+    border: 1px solid var(--icons-border);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    width: 448px;
+    height: 23px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-dark-grey);
+    margin: 40px 40px 12px;
+  }
+}
+
+.personal-data {
+  display: flex;
+  line-height: 1.3;
+  flex-direction: column;
+  width: 448px;
+  height: 342px;
+  margin: 0 auto;
+
+  &__field {
+    margin-bottom: 10px;
+  }
+
+  &__label {
+    font-size: 12px;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    background-color: var(--bg-blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    margin: 0 auto;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: var(--bg-blue-bright);
+  }
+}
+
+.modal-label {
+  position: relative;
+
+  &:focus-within &__svg {
+    fill: var(--icons-blue);
+  }
+
+  &:hover &__input,
+  &:focus &__input {
+    border-color: var(--bg-blue);
+  }
+
+  &:hover &__svg,
+  &:focus &__svg {
+    fill: var(--icons-blue);
+  }
+
+  &__input {
+    width: 448px;
+    height: 40px;
+    border: 1px solid var(--input-border-modal);
+    border-radius: 4px;
+    padding-left: 40px;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input:focus-within {
+    border-color: var(--bg-blue);
+  }
+
+  &__svg {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.text-area {
+  &__label {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__comment {
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+    border: 1px solid var(--input-border-modal);
+    border-radius: 4px;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__comment:hover,
+  &__comment:focus {
+    border-color: var(--bg-blue);
+  }
+
+  &__comment:focus-within {
+    border-color: #2196f3;
+  }
+
+  &__comment::placeholder {
+    color: var(--input-placeholder-modal);
+  }
+}
+
+.policy {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.714;
+  position: relative;
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__svg {
+    position: absolute;
+    top: 5px;
+    left: -19.5px;
+  }
+
+  &__link {
+    color: var(--text-blue);
+  }
+
+  &__input {
+    appearance: none;
+  }
+
+  &__label::before {
+    display: block;
+    position: absolute;
+    left: -20.5px;
+    top: 1px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input:checked + &__label::before {
+    background-color: var(--bg-blue);
+    width: 15px;
+    height: 15px;
+    border: solid 1px var(--bg-blue);
+    border-radius: 3px;
+  }
+}

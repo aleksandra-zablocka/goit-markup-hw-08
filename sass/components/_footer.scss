@@ -1,0 +1,110 @@
+.foot {
+  background-color: var(--bg-dark-grey);
+
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.address {
+  font-style: normal;
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__item:first-child {
+    margin-top: 20px;
+  }
+
+  &__street,
+  &__mail,
+  &__tel {
+    text-decoration: none;
+    color: var(--link-transparent-grey);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__street:focus,
+  &__street:hover,
+  &__mail:focus,
+  &__mail:hover,
+  &__tel:focus,
+  &__tel:hover {
+    color: var(--text-blue);
+  }
+}
+
+.footer-title {
+  color: var(--icons-white);
+  margin-bottom: 20px;
+}
+
+.newsletter {
+  display: flex;
+
+  &__input {
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid var(--input-border-footer);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: var(--input-placeholder-footer);
+    padding-left: 16px;
+    margin-right: 12px;
+    outline: none;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__input::placeholder {
+    color: var(--input-email);
+  }
+
+  &__input:focus-within {
+    border-color: var(--bg-blue);
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border-color: var(--bg-blue);
+  }
+
+  &__button {
+    width: 200px;
+    height: 50px;
+    border-style: none;
+    background-color: var(--bg-blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button:hover,
+  &__button:focus {
+    background-color: var(--bg-blue-bright);
+  }
+}

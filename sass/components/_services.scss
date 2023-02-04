@@ -1,0 +1,22 @@
+.services {
+  padding-bottom: 0;
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+  }
+
+  &__label {
+    color: var(--text-dark-grey);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+}
