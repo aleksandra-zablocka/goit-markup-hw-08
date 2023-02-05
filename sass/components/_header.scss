@@ -12,6 +12,7 @@ header {
 .navig {
   flex-grow: 1;
   padding-left: 93px;
+  display: none;
 }
 
 .navigation {
@@ -52,6 +53,7 @@ header {
 
 .contacts-header {
   display: flex;
+  display: none;
   width: 295px;
   justify-content: flex-end;
   gap: 30px;
