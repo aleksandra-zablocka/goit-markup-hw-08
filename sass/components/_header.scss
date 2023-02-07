@@ -1,5 +1,6 @@
 header {
   border-bottom: var(--border-header) 1px solid;
+  position: relative;
 }
 
 .page-header {
@@ -105,6 +106,9 @@ header {
 }
 
 .mobile-container {
+  position: absolute;
+  top: 22px;
+  right: 22px;
   &__icon {
     fill: var(--text-black);
   }
@@ -112,5 +116,6 @@ header {
   &__button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
 }

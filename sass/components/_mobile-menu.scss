@@ -7,8 +7,15 @@
   height: 100vh;
   z-index: 999;
   background-color: var(--bg-white);
+  // transform: translateX(100%);
+  // transition: transform 250ms ease-in-out;
+
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  visibility: visible;
+  opacity: 1;
 
   &__button {
     position: absolute;
@@ -75,4 +82,8 @@
   border-right: 1px var(--input-border-modal) solid;
   margin-right: 10px;
   padding-right: 10px;
+}
+
+.link--no-border {
+  border: none;
 }
