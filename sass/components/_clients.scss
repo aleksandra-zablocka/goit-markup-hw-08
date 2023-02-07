@@ -9,7 +9,20 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+      flex-basis: calc((100% - 30px) / 2);
+
+      @include tablet {
+      }
+      flex-basis: calc((100% - 2 * 30px) / 3);
+      @include desktop {
+        flex-basis: calc((100% - 5 * 30px) / 6);
+      }
+    }
   }
 
   &__icon {

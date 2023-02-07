@@ -1,6 +1,11 @@
 header {
   border-bottom: var(--border-header) 1px solid;
-  position: relative;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-white);
 }
 
 .page-header {
@@ -19,8 +24,13 @@ header {
 .navig {
   flex-grow: 1;
   padding-left: 93px;
-  @media screen and (max-width: 767px) {
-    display: none;
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+    display: flex;
   }
 }
 
@@ -61,13 +71,18 @@ header {
 }
 
 .contacts-header {
+  // width: 295px;
+  // flex-grow: 0.5;
   display: flex;
-  width: 295px;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 30px;
-  flex-grow: 0.5;
-  @media screen and (max-width: 767px) {
-    display: none;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: flex;
   }
 
   &__link:focus,
@@ -109,13 +124,29 @@ header {
   position: absolute;
   top: 22px;
   right: 22px;
+
   &__icon {
     fill: var(--text-black);
+  }
+
+  &__icon:hover,
+  &__icon:focus {
+    fill: var(--icons-blue);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__button {
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
   }
 }

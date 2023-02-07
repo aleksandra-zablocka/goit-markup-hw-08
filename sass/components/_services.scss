@@ -1,5 +1,5 @@
 .services {
-  padding-bottom: 0;
+  padding-bottom: 94px;
 
   &__list {
     display: flex;
@@ -8,23 +8,27 @@
   }
 
   &__item {
-    // width: 270px;
-      
-  }
-
-
-
-  &__icon {
-    margin-bottom: 30px;
+     @include tablet {
+      flex-basis: calc((100% - 30px) / 2);
+    }
+    @include desktop {
+      flex-basis: calc((100% - 3 * 30px) / 4);
+    }
   }
 
   &__label {
     color: var(--text-dark-grey);
     font-weight: 700;
     margin-bottom: 10px;
+    text-align: center;
   }
-}
 
-.icon-bg {
-  background-color: black;
+  &__bg {
+    background-color: var(--bg-grey);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }

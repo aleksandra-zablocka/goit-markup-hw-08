@@ -70,8 +70,8 @@
       <section class="services section container">
         <ul class="services__list list-style-none">
           <li class="services__item">
-            <div class="icon-bg">
-              <svg class="services__icon" height="120">
+            <div class="services__bg">
+              <svg class="services__icon" width="270" height="120">
                 <use href="./images/icons.svg#icon-satelite"></use>
               </svg>
             </div>
@@ -82,9 +82,11 @@
             </p>
           </li>
           <li class="services__item">
-            <svg class="services__icon" width="270" height="120">
-              <use href="./images/icons.svg#icon-clock"></use>
-            </svg>
+            <div class="services__bg">
+              <svg class="services__icon" width="270" height="120">
+                <use href="./images/icons.svg#icon-clock"></use>
+              </svg>
+            </div>
             <h4 class="services__label">LOREM IPSUM</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
@@ -92,9 +94,11 @@
             </p>
           </li>
           <li class="services__item">
-            <svg class="services__icon" width="270" height="120">
-              <use href="./images/icons.svg#icon-laptop"></use>
-            </svg>
+            <div class="services__bg">
+              <svg class="services__icon" width="270" height="120">
+                <use href="./images/icons.svg#icon-laptop"></use>
+              </svg>
+            </div>
             <h4 class="services__label">LOREM IPSUM</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
@@ -102,9 +106,11 @@
             </p>
           </li>
           <li class="services__item">
-            <svg class="services__icon" width="270" height="120">
-              <use href="./images/icons.svg#icon-astronaut"></use>
-            </svg>
+            <div class="services__bg">
+              <svg class="services__icon" width="270" height="120">
+                <use href="./images/icons.svg#icon-astronaut"></use>
+              </svg>
+            </div>
             <h4 class="services__label">LOREM IPSUM</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel arcu sem. Sed non sodales dui. Interdum
@@ -114,7 +120,7 @@
         </ul>
       </section>
       <!-- section 3 -->
-      <section class="applications section container">
+      <section class="applications container">
         <h2 class="applications__title">Czym się zajmujemy</h2>
         <ul class="applications__list list-style-none">
           <li class="applications__item">
@@ -171,7 +177,7 @@
                 />
                 <figcaption class="member__caption">
                   <h3 class="member__name">John Doe</h3>
-                  <p class="member__job-title">Product Designer</p>
+                  <p class="member__job-title">Frontend Developer</p>
                   <ul class="social-media team__social-media list-style-none">
                     <li>
                       <a class="social-media__bg team__bg">
@@ -347,23 +353,23 @@
       <section class="clients section container">
         <h2 class="clients__title">Nasi klienci</h2>
         <ul class="clients__list list-style-none">
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-1"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-1"></use></svg>
           </li>
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-2"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-2"></use></svg>
           </li>
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-3"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-3"></use></svg>
           </li>
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-4"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-4"></use></svg>
           </li>
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-5"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-5"></use></svg>
           </li>
-          <li>
-            <svg class="clients__icon" width="170" height="92"><use href="./images/icons.svg#icon-client-6"></use></svg>
+          <li class="clients__item">
+            <svg class="clients__icon"><use href="./images/icons.svg#icon-client-6"></use></svg>
           </li>
         </ul>
       </section>
@@ -506,7 +512,7 @@
       </div>
     </div>
     <!-- mobile menu -->
-    <div class="menu-container js-menu-container is-open" id="mobile-menu">
+    <div class="menu-container js-menu-container" id="mobile-menu">
       <button type="button" class="menu-container__button js-close-menu">
         <svg class="menu-container__icon" width="18.67px" height="18.67px">
           <use href="./images/icons.svg#menu-close"></use>

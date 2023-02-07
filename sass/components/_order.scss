@@ -1,10 +1,11 @@
 .order {
+  margin-top: 60px;
   background-color: var(--bg-dark-grey);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.6)),
     url(../images/index/people-at-the-office.jpg);
   background-repeat: no-repeat;
   background-position: 50%;
-  background-size: 1600px 600px;
+  // background-size: 1600px 600px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -12,23 +13,41 @@
   color: var(--text-white);
   display: flex;
   flex-direction: column;
-  height: 600px;
+  min-height: 600px;
   justify-content: center;
   align-items: center;
-  padding: 200px 452px;
-  
+  // padding: 200px 452px;
+
+  @include tablet {
+    background-size: 1600px 600px;
+    padding: 200px 452px;
+  }
+  @include desktop {
+    background-size: 1600px 600px;
+    padding: 200px 452px;
+  }
+
   &__title {
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    width: 696px;
+    // min-width: 696px;
     height: 120px;
     margin-bottom: 30px;
+
+    @include tablet {
+      min-width: 696px;
+    }
+    @include desktop {
+      min-width: 696px;
+    }
   }
 
   &__button {
     background-color: var(--bg-blue);
     color: var(--text-white);
+    width: 200px;
+    height: 50px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
