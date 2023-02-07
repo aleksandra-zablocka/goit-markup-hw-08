@@ -5,20 +5,43 @@
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
   }
 }
 
 .address {
   font-style: normal;
-
+  text-align: center;
   &__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 
   &__item:first-child {
     margin-top: 20px;
+  }
+
+  @include desktop {
+    &__item {
+      margin-bottom: 9px;
+      text-align: start;
+    }
   }
 
   &__street,
@@ -44,13 +67,30 @@
 .footer-title {
   color: var(--icons-white);
   margin-bottom: 20px;
+  margin-top: 60px;
+  text-align: center;
+
+  @include tablet {
+    margin-top: 0px;
+  }
+  @include desktop {
+    margin-top: 0px;
+    text-align: start;
+  }
 }
 
 .newsletter {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+  }
 
   &__input {
-    width: 358px;
+    width: 450px;
     height: 50px;
     background-color: transparent;
     border: 1px solid var(--input-border-footer);
@@ -61,11 +101,18 @@
     letter-spacing: 0.03em;
     color: var(--input-placeholder-footer);
     padding-left: 16px;
-    margin-right: 12px;
+
+    margin-bottom: 20px;
     outline: none;
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include desktop {
+      margin-bottom: 0px;
+      margin-right: 12px;
+      width: 358px;
+    }
   }
 
   &__input::placeholder {
