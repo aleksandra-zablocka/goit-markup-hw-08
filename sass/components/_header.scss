@@ -4,15 +4,23 @@ header {
 
 .page-header {
   display: flex;
-  height: 80px;
+  min-height: 60px;
   align-items: center;
   justify-content: space-between;
+  @include tablet {
+    min-height: 80px;
+  }
+  @include desktop {
+    min-height: 80px;
+  }
 }
 
 .navig {
   flex-grow: 1;
   padding-left: 93px;
-  display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .navigation {
@@ -53,11 +61,13 @@ header {
 
 .contacts-header {
   display: flex;
-  display: none;
   width: 295px;
   justify-content: flex-end;
   gap: 30px;
   flex-grow: 0.5;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
   &__link:focus,
   &__link:hover {
@@ -91,5 +101,16 @@ header {
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.mobile-container {
+  &__icon {
+    fill: var(--text-black);
+  }
+
+  &__button {
+    border: none;
+    background-color: transparent;
   }
 }

@@ -1,14 +1,18 @@
 .services {
   padding-bottom: 0;
-  
+
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   &__item {
-    width: 270px;
+    // width: 270px;
+      
   }
+
+
 
   &__icon {
     margin-bottom: 30px;
@@ -19,4 +23,8 @@
     font-weight: 700;
     margin-bottom: 10px;
   }
+}
+
+.icon-bg {
+  background-color: black;
 }
