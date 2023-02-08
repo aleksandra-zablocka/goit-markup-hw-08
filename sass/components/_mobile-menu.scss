@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 999;
+  visibility: hidden;
   background-color: var(--bg-white);
   transition-property: transform;
   transition-duration: 250ms;
@@ -30,18 +31,22 @@
   }
 
   &__navigation {
-    padding-top: 48px;
-    padding-left: 40px;
+    position: absolute;
+    top: 48px;
+    left: 40px;
   }
 
   &__contacts {
-    padding-top: 250px;
-    padding-left: 40px;
+    position: absolute;
+    bottom: 134px;
+    left: 40px;
   }
 
   &__social-media {
+    position: absolute;
+    bottom: 48px;
+    left: 40px;
     display: flex;
-    padding-left: 40px;
   }
 
   & li {
@@ -66,6 +71,7 @@
 
   &.is-open {
     transform: translateX(0);
+    visibility: visible;
   }
 }
 
