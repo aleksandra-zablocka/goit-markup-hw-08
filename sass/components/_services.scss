@@ -3,17 +3,17 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
   }
 
   &__item {
     @include tablet {
-      width: calc(100% / 2 - 30px);
+      flex-basis: calc((100% - 30px) / 2);
     }
     @include desktop {
-      width: calc(100% / 4 - 30px);
+      flex-basis: calc((100% - 3 * 30px) / 4);
     }
   }
 
