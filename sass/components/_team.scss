@@ -25,6 +25,12 @@
       flex-basis: calc((100% - 3 * 30px) / 4);
     }
   }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .member {

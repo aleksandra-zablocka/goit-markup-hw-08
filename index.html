@@ -63,8 +63,10 @@
     <main>
       <!-- section 1 -->
       <section class="order">
-        <h1 class="order__title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button type="button" class="order__button modal-open" data-modal-open>Zamów usługę</button>
+        <div class="order__description">
+          <h1 class="order__title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
+          <button type="button" class="order__button modal-open" data-modal-open>Zamów usługę</button>
+        </div>
       </section>
       <!-- section 2 -->
       <section class="services section container">
@@ -120,43 +122,65 @@
         </ul>
       </section>
       <!-- section 3 -->
-      <section class="applications container">
-        <h2 class="applications__title">Czym się zajmujemy</h2>
-        <ul class="applications__list list-style-none">
-          <li class="applications__item">
-            <div class="what-we-do">
-              <img
-                class="what-we-do__image"
-                src="./images/index/service-1.jpg"
-                alt="osoba pisząca na klawiaturze"
-                width="370"
-                height="294"
-              />
-              <p class="what-we-do__label">APLIKACJE INTERNETOWE</p>
+      <section class="what-we-do container">
+        <h2 class="what-we-do__title">Czym się zajmujemy</h2>
+        <ul class="what-we-do__list list-style-none">
+          <li class="what-we-do__item">
+            <div class="applications">
+              <picture class="applications__pic">
+                <source
+                  srcset="./images/index/applications-1-1.jpg 1x, ./images/index/applications-1-2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="applications__image"
+                  src="./images/index/applications-1.jpg"
+                  alt="osoba pisząca na klawiaturze"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
+              <p class="applications__label">APLIKACJE INTERNETOWE</p>
             </div>
           </li>
-          <li class="applications__item">
-            <div class="what-we-do">
-              <img
-                class="what-we-do__image"
-                src="./images/index/service-2.jpg"
-                alt="osoba korzystająca z telefonu"
-                width="370"
-                height="294"
-              />
-              <p class="what-we-do__label">APLIKACJE MOBILNE</p>
+          <li class="what-we-do__item">
+            <div class="applications">
+              <picture class="applications__pic">
+                <source
+                  srcset="./images/index/applications-2-1.jpg 1x, ./images/index/applications-2-2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="applications__image"
+                  src="./images/index/applications-2.jpg"
+                  alt="osoba pisząca na klawiaturze"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+              <p class="applications__label">APLIKACJE MOBILNE</p>
             </div>
           </li>
-          <li class="applications__item">
-            <div class="what-we-do">
-              <img
-                class="what-we-do__image"
-                src="./images/index/service-3.jpg"
-                alt="osoba pracująca na tablecie"
-                width="370"
-                height="294"
-              />
-              <p class="what-we-do__label">ROZWIĄZANIA GRAFICZNE</p>
+          <li class="what-we-do__item">
+            <div class="applications">
+              <picture class="applications__pic">
+                <source
+                  srcset="./images/index/applications-3-1.jpg 1x, ./images/index/applications-3-2.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <img
+                  class="applications__image"
+                  src="./images/index/applications-3.jpg"
+                  alt="osoba pisząca na klawiaturze"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+              <p class="applications__label">ROZWIĄZANIA GRAFICZNE</p>
             </div>
           </li>
         </ul>
@@ -168,13 +192,31 @@
           <ul class="team__list list-style-none">
             <li class="team__item">
               <figure class="member">
-                <img
-                  class="member__image"
-                  src="./images/index/john-doe-1.jpg"
-                  alt="John Doe 1"
-                  width="270"
-                  height="260"
-                />
+                <picture class="team__image">
+                  <source
+                    srcset="./images/index/john-doe-1-1-mob.jpg 1x, ./images/index/john-doe-1-2-mob.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-1-1-tab.jpg 1x, ./images/index/john-doe-1-2-tab.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-1-1-desk.jpg 1x, ./images/index/john-doe-1-2-desk.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="member__image"
+                    src="./images/index/john-doe-1.jpg"
+                    alt="John Doe 1"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
+
                 <figcaption class="member__caption">
                   <h3 class="member__name">John Doe</h3>
                   <p class="member__job-title">Frontend Developer</p>
@@ -213,13 +255,31 @@
             </li>
             <li class="team__item">
               <figure class="member">
-                <img
-                  class="member__image"
-                  src="./images/index/john-doe-2.jpg"
-                  alt="John Doe 2"
-                  width="270"
-                  height="260"
-                />
+                <picture class="team__image">
+                  <source
+                    srcset="./images/index/john-doe-2-1-mob.jpg 1x, ./images/index/john-doe-2-2-mob.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-2-1-tab.jpg 1x, ./images/index/john-doe-2-2-tab.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-2-1-desk.jpg 1x, ./images/index/john-doe-2-2-desk.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="member__image"
+                    src="./images/index/john-doe-2.jpg"
+                    alt="John Doe 2"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
+
                 <figcaption class="member__caption">
                   <h3 class="member__name">John Doe</h3>
                   <p class="member__job-title">Frontend Developer</p>
@@ -258,13 +318,30 @@
             </li>
             <li class="team__item">
               <figure class="member">
-                <img
-                  class="member__image"
-                  src="./images/index/john-doe-3.jpg"
-                  alt="John Doe 3"
-                  width="270"
-                  height="260"
-                />
+                <picture class="team__image">
+                  <source
+                    srcset="./images/index/john-doe-3-1-mob.jpg 1x, ./images/index/john-doe-3-2-mob.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-3-1-tab.jpg 1x, ./images/index/john-doe-3-2-tab.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-3-1-desk.jpg 1x, ./images/index/john-doe-3-2-desk.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="member__image"
+                    src="./images/index/john-doe-3.jpg"
+                    alt="John Doe 3"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <figcaption class="member__caption">
                   <h3 class="member__name">John Doe</h3>
                   <p class="member__job-title">Marketing</p>
@@ -303,13 +380,30 @@
             </li>
             <li class="team__item">
               <figure class="member">
-                <img
-                  class="member__image"
-                  src="./images/index/john-doe-4.jpg"
-                  alt="John Doe 4"
-                  width="270"
-                  height="260"
-                />
+                <picture class="team__image">
+                  <source
+                    srcset="./images/index/john-doe-4-1-mob.jpg 1x, ./images/index/john-doe-4-2-mob.jpg 2x"
+                    media="(min-width: 320px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-4-1-tab.jpg 1x, ./images/index/john-doe-4-2-tab.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="./images/index/john-doe-4-1-desk.jpg 1x, ./images/index/john-doe-4-2-desk.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+
+                  <img
+                    class="member__image"
+                    src="./images/index/john-doe-4.jpg"
+                    alt="John Doe 4"
+                    width="270"
+                    height="260"
+                  />
+                </picture>
                 <figcaption class="member__caption">
                   <h3 class="member__name">John Doe</h3>
                   <p class="member__job-title">UI Designer</p>
