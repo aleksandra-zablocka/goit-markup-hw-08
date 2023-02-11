@@ -17,8 +17,22 @@
   <body>
     <!-- header -->
     <header>
+      <!-- mobile-menu -->
+      <div class="mobile-container">
+        <button
+          type="button"
+          class="mobile-container__button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-container__icon" width="24px" height="16px" aria-label="mobile menu switcher">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
       <div class="page-header container">
         <a href="./index.html" class="logo logo--black"><span class="logo__colored">Web</span>Studio</a>
+
         <nav class="navig">
           <ul class="navigation list-style-none">
             <li><a href="./index.html" class="navigation__link">Agencja</a></li>
@@ -372,5 +386,41 @@
         </div>
       </div>
     </footer>
+    <!-- mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-container__button js-close-menu">
+        <svg class="menu-container__icon" width="18.67px" height="18.67px">
+          <use href="./images/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <ul class="menu-container__navigation list-style-none">
+        <li><a href="./index.html" class="menu-container__link">Agencja</a></li>
+        <li><a href="./portfolio.html" class="menu-container__link">Portfolio</a></li>
+        <li><a href="" class="menu-container__link">Kontakt</a></li>
+      </ul>
+      <ul class="menu-container__contacts list-style-none">
+        <li>
+          <a href="tel:+48111111111" class="menu-container__link link--phone">+48 111 111 111</a>
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="menu-container__link link--email">info@devstudio.com </a>
+        </li>
+      </ul>
+      <ul class="menu-container__social-media list-style-none">
+        <li><a href="" class="menu-container__link link--sm">Instagram</a></li>
+        <li><a href="" class="menu-container__link link--sm">Twitter</a></li>
+        <li><a href="" class="menu-container__link link--sm">Facebook</a></li>
+        <li><a href="" class="menu-container__link link--sm link--no-border">LinkedIn</a></li>
+      </ul>
+    </div>
+    <!-- skrypt z repozytorium do HW08 -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
