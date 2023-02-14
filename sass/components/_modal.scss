@@ -227,8 +227,12 @@
 
   &__svg {
     position: absolute;
-    top: 5px;
+    top: 3px;
     left: -19.5px;
+
+    @include desktop {
+      top: 5px;
+    }
   }
 
   &__link {
@@ -243,7 +247,7 @@
     display: block;
     position: absolute;
     left: -20.5px;
-    top: 1px;
+    top: -1px;
     content: "";
     width: 15px;
     height: 15px;
@@ -253,6 +257,10 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include desktop {
+      top: 1px;
+    }
   }
 
   &__input:checked + &__label::before {
