@@ -93,6 +93,10 @@
   border-right: 1px var(--input-border-modal) solid;
   margin-right: 10px;
   padding-right: 10px;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+
 }
 
 .link--no-border {
